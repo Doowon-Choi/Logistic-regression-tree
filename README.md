@@ -1,6 +1,6 @@
 # MOB Logistic Regression Tree
 
-The Model-based Recursive partitioning for binary outcome (i.e., MOB logistic regression tree) is implemented in Python from scratch.   
+The Model-based Recursive partitioning for binary outcome (i.e., MOB logistic regression tree) is implemented in Python from scratch. 
 The MOB tree is already built in R package *"party"* and *"partykit"*, and it is able to handle a variety classes of parametric models like linear regression, 
 logistic regression and so on. Details are found in the reference below.
 
