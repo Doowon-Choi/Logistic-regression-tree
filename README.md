@@ -38,7 +38,7 @@ large significant level in parameter instablity test and BIC score over large da
 
 For conducting parameter instablity test, 'p_val_set.csv' file is required. The file is used to compute p-value given the limiting distribution *k*-dimensional tied-down Bessel process for continuous split variable. I intentionally did not upload the file here due to potential infringement of intellectual property rights, but users can find it from the original R package "*party*" or Dr. Bruce E. Hansen's work.
 
-This implemtnation use Python dictionary to store the resulting tree.
+This implemtnation uses Python dictionary to store the resulting tree.
 
 ## Compare results with R
 This code reproduces the MOB tree described in the original paper. The dataset is Pima Indians Diabetes data in R pacakge "mlbench", and the modified data is also uploaded.  
