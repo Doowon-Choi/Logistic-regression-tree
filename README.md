@@ -36,17 +36,30 @@ To control tree size, the fifth argument and the last argument, tolN, are used. 
 Basically, this version relies on pre-pruning by following the original MOB. However, as the original paper mentions, we can conduct post-pruning via 
 large significant level in parameter instablity test and BIC score over large dataset.
 
-For conducting parameter instablity test, 'p_val_set.csv' file is required. The file is used to compute p-value given the limiting distribution *k*-dimensional tied-down Bessel process for
-continuous split variable. I intentionally did not upload the file here due to potential infringement of intellectual property rights, but users can find it from the original R package or Dr. Bruce
-E. Hansen's work.
+For conducting parameter instablity test, 'p_val_set.csv' file is required. The file is used to compute p-value given the limiting distribution *k*-dimensional tied-down Bessel process for continuous split variable. I intentionally did not upload the file here due to potential infringement of intellectual property rights, but users can find it from the original R package "*party*" or Dr. Bruce E. Hansen's work.
 
 This implemtnation use Python dictionary to store the resulting tree.
 
 ## Compare results with R
-This code reproduces the tree 
+This code reproduces the MOB tree described in the original paper. The dataset is Pima Indians Diabetes data in R pacakge "mlbench", and the modified data is also uploaded.  
 
+![Compare](https://user-images.githubusercontent.com/69023373/89147894-bd9a5f00-d51d-11ea-8743-c894f7100a19.png)
+
+For R code to build MOB tree, please follow the code that is already provided in R package "*Party*".
+
+```r   
+library(party)
+data("PimaIndiansDiabetes", package = "mlbench")
+## partition logistic regression diabetes ~ glucose 
+## wth respect to all remaining variables
+fmPID <- mob(diabetes ~ glucose | pregnant + pressure + triceps + 
+               insulin + mass + pedigree + age,
+             data = PimaIndiansDiabetes, model = glinearModel, 
+             family = binomial())
+fmPID
+plot(fmPID)
+```
 Please take a look at MOB_Main.py file.
-
 
 ## Version
 - python 3.6.3
@@ -56,3 +69,5 @@ Please take a look at MOB_Main.py file.
 - sklearn 0.21.1
 
 ## Reference
+Zeileis, A., Hothorn, T., & Hornik, K. (2008). Model-based recursive partitioning. *Journal of Computational and Graphical Statistics*, 17(2), 492-514.   
+Hansen, B. E. (1997). Approximate asymptotic p values for structuras-change tests. *Journal of Business & Economic Statistics*, 15(1), 60-67.
