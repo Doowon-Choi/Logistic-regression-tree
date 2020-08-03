@@ -67,6 +67,6 @@ Please take a look at MOB_Main.py file.
 - pandas 0.20.3
 - sklearn 0.21.1
 
-## Reference
+## References
 Zeileis, A., Hothorn, T., & Hornik, K. (2008). Model-based recursive partitioning. *Journal of Computational and Graphical Statistics*, 17(2), 492-514.   
 Hansen, B. E. (1997). Approximate asymptotic p values for structuras-change tests. *Journal of Business & Economic Statistics*, 15(1), 60-67.
