@@ -8,8 +8,7 @@ logistic regression and so on. Details are found in the reference below.
 Before fitting MOB logistic regression tree, the variables in the dataset should be carefully designed.   
 
 The first column of dataset must be a response variable (i.e., binary outcome) having 0 or 1.
-Predictor variables X (i.e., variables used to fit logistic regression) have to be placed from the second column. For example, if we have three predictors, those three are placed
-in the second, third, and fourth column of dataset. The rest columns are seet to split variables Z (i.e., variables for split a node).   
+Predictor variables X (i.e., variables used to fit logistic regression) have to be placed from the second column. For example, if we have three predictors, those three are placed in the second, third, and fourth column of dataset. The rest columns are set to split variables Z (i.e., variables for split a node).   
 
 Note that the idea of MOB tree is that if there is a sytematic change in parameters of models (i.e., coefficients) with respect to split variable at certain node, the node is split
 by split variable that leads to the biggest change.   
