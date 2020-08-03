@@ -39,7 +39,7 @@ For conducting parameter instablity test, 'p_val_set.csv' file is required. The 
 
 This implemtnation uses Python dictionary to store the resulting tree.
 
-## Compare results with R
+## Compare resulting tree strucuture with that of R
 This code reproduces the MOB tree described in the original paper. The dataset is Pima Indians Diabetes data in R pacakge "mlbench", and the modified data is also uploaded.  
 
 <img src="https://user-images.githubusercontent.com/69023373/89147894-bd9a5f00-d51d-11ea-8743-c894f7100a19.png" width="75%">
